@@ -1,0 +1,29 @@
+{
+  "name": "ts-express-sql-user-authentication-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dist": "tsup src",
+    "start:dev": "tsx --env-file=.env src/server.ts",
+    "start:watch": "tsx watch --env-file=.env src/server.ts",
+    "start:dist": "npm run dist && --env-file=.env node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/pg": "^8.11.11",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
