@@ -1,5 +1,7 @@
 import express from 'express'
 import cors from 'cors'
+import * as UsersRouter from "./routes/users.routes"
+
 
 export const createApp = () => {
   const app = express()
@@ -10,7 +12,7 @@ export const createApp = () => {
   app.use(cors())
 
   // ROUTE CONFIGURATION
-  // app.use('/', router)
+  app.use('/', UsersRouter.router)
 
   return app
 }
