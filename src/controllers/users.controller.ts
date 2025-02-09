@@ -11,6 +11,8 @@ class UserController {
 
   async getUserByUuid(req: Request, res: Response) {
     const uuid = req.params.uuid
+    const users = await UserRepository.findById(uuid)
+    res.status(StatusCode.OK).send(users)
 
   }
 }
